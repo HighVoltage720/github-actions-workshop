@@ -1,4 +1,4 @@
-name: Shell Commands
+name: First Workflow
 
 on: [push]
 
@@ -17,13 +17,13 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-
-  run-windows-commands:
-    runs-on: windows-latest
-    needs: ["run-shell-command"]
+  run-github-actions:
+    runs-on: ubuntu-latest
     steps:
-      - name: Directory PowerShell
-        run: Get-Location
-      - name: Directory Bash
-        run: pwd
-        shell: bash
+      - name: Simple JS Action
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: Billy
+      - name: Log greeting time
+        run: echo "${{ steps.greet.output }}"
