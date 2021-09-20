@@ -1,4 +1,4 @@
-![](https://github.com/HighVoltage720/github-actions-workshop/CI/badge.svg?branch=master&event=push)
+![](https://github.com/HighVoltage720/github-actions-workshop/FirstWorkflow/badge.svg?branch=master&event=push)
 
 # Github Actions Demo
 
